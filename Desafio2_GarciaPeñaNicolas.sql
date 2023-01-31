@@ -3,18 +3,18 @@
 SELECT * FROM Usuario WHERE NombreUsuario = 'eperez';
 -- Ejercicio 2:
 --consulta mal
-SELECT * FROM Usuario WHERE NombreUsuario = 'eperez' AND Contraseña = 'SoyTobiasCasazza';
+SELECT * FROM Usuario WHERE NombreUsuario = 'eperez' AND ContraseÃ±a = 'SoyTobiasCasazza';
 --consulta bien
-SELECT * FROM Usuario WHERE NombreUsuario = 'eperez' AND Contraseña = 'SoyErnestoPerez';
+SELECT * FROM Usuario WHERE NombreUsuario = 'eperez' AND ContraseÃ±a = 'SoyErnestoPerez';
 -- Ejercicio 3:
 SELECT * FROM Producto WHERE IdUsuario = 3;
 -- Ejercicio 4:
-INSERT INTO Usuario (Nombre, Apellido, NombreUsuario, Contraseña, Mail) VALUES ('Nicolás', 'García Peña' , 'nicogpe', '12345', 'nicolasgarciapenia@gmail.com');
+INSERT INTO Usuario (Nombre, Apellido, NombreUsuario, ContraseÃ±a, Mail) VALUES ('NicolÃ¡s', 'GarcÃ­a PeÃ±a' , 'nicogpe', '12345', 'nicolasgarciapenia@gmail.com');
 -- Ejercicio 5:
 INSERT INTO Producto (Descripciones, Costo, PrecioVenta, Stock, IdUsuario) VALUES ('Zapatillas Nike Jordan' , 35000 , 50000, 15, 3);
 --Clase 11:
 --Ejercicio 1:
-UPDATE Usuario SET Contraseña = 'PerezErnesto' WHERE Nombre = 'Ernesto';
+UPDATE Usuario SET ContraseÃ±a = 'PerezErnesto' WHERE Nombre = 'Ernesto';
 --Ejercicio 2:
 DELETE FROM Usuario WHERE Apellido ='Casazza';
 --Ejercicio 3:
@@ -26,7 +26,7 @@ SELECT Producto.Descripciones, Usuario.Nombre FROM Producto INNER JOIN Usuario O
 
 --Desafio
 --Ejercicio 1:
-SELECT * FROM ProductoVendido;
+SELECT Producto.Descripciones, ProductoVendido.Stock FROM ProductoVendido INNER JOIN Producto ON Producto.Id = ProductoVendido.IdProducto
 --Ejercicio 2:
 SELECT * FROM ProductoVendido WHERE Stock >= 2;
 --Ejercicio 3:
